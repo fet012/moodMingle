@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 
 const MoodHistory = () => {
-  const [history] = useState(['😊', '😢', '😡']); // Bug: No dynamic updates
+  const [history, setHistory] = useState([]); // Bug: No dynamic updates
+  const updateHistory=()=> {
+    setHistory((prevArray)=> [...prevArray, ...contextValue])
+  }
 
   return (
     <div className="bg-white text-black p-6 rounded-lg shadow-md">

@@ -7,7 +7,7 @@ import DashboardPage from './components/dashboard.jsx';
 
 const ProtectedRoute = ({ children }) => {
   const { isLoggedIn } = useContext(AuthContext);
-  return isLoggedIn ? children : <Navigate to="/login" />;
+  return isLoggedIn ? children : <Navigate to="/" />;
 };
 
 const App = () => (
