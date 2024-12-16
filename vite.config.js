@@ -12,18 +12,18 @@ export default defineConfig({
         name: "Mood Mingle",
         short_name: "MoodMingle",
         description: "Track and analyze your moods effortlessly!",
-        theme_color: "#800080 ",
+        theme_color: "#800080",
         background_color: "#eae6f8",
         display: "standalone",
         start_url: "/",
         icons: [
           {
-            src: "/icon-192.png",
+            src: "/icon-192.png", // Path remains the same
             sizes: "192x192",
             type: "image/png",
           },
           {
-            src: "/icon-512.png",
+            src: "/icon-512.png", // Path remains the same
             sizes: "512x512",
             type: "image/png",
           },
@@ -46,9 +46,8 @@ export default defineConfig({
     }),
   ],
   build: {
-    outDir: "public", // Specify output directory
-    index: "index.html",
-    chunkSizeWarningLimit: 1000, // Increase limit (optional)
+    outDir: "dist", // Use 'dist' for output directory, separate from 'public'
+    chunkSizeWarningLimit: 1000, // Optional: to avoid chunk size warnings
     rollupOptions: {
       output: {
         manualChunks(id) {
